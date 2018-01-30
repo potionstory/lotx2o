@@ -47,7 +47,7 @@ _mongoose2.default.Promise = global.Promise;
 _mongoose2.default.connect('mongodb://potionstory:tionnii7&@ds133094.mlab.com:33094/lotto');
 
 var app = (0, _express2.default)();
-var port = 3000;
+var port = 8080;
 var devPort = 4000;
 
 app.use((0, _morgan2.default)('dev'));
@@ -71,7 +71,7 @@ app.get('*', function (req, res) {
     res.sendFile(_path2.default.resolve(__dirname, './../public/index.html'));
 });
 
-app.listen(port, function () {
+app.listen(process.env.PORT || port, function () {
     console.log('Express is listening on port', port);
 });
 
