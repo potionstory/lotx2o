@@ -19,7 +19,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://potionstory:tionnii7&@ds133094.mlab.com:33094/lotto');
 
 const app = express();
-const port = 8080;
+const port = 5000;
 const devPort = 4000;
 
 app.use(morgan('dev'));
@@ -43,7 +43,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, './../public/index.html'));
 });
 
-app.listen(port, () => {
+app.listen((process.env.PORT || port), () => {
     console.log('Express is listening on port', port);
 });
 
