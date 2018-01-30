@@ -1,0 +1,128 @@
+/* common */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}
+input {margin:0;-moz-appearance:textfield;appearance:textfield}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {margin:0;-webkit-appearance:none}
+
+/* label color */
+.input-field input {color:#5B5B5B}
+.input-field label {color: #5B5B5B}
+
+/* label focus color */
+.input-field input[type=text]:focus + label,
+.input-field input[type=password]:focus + label,
+.input-field input[type=email]:focus + label,
+.input-field input[type=number]:focus + label {
+    color: #2196F3;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus,
+.input-field input[type=password]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=number]:focus   {
+    border-bottom: 1px solid #2196F3;
+    box-shadow: 0 1px 0 0 #2196F3;
+}
+/* valid color */
+.input-field input[type=text].valid,
+.input-field input[type=password].valid,
+.input-field input[type=email].valid,
+.input-field input[type=number].valid  {
+    border-bottom: 1px solid #2196F3;
+    box-shadow: 0 1px 0 0 #2196F3;
+}
+/* invalid color */
+.input-field input[type=text].invalid,
+.input-field input[type=passwod].invalid,
+.input-field input[type=email].invalid,
+.input-field input[type=number].invalid {
+    border-bottom: 1px solid #2196F3;
+    box-shadow: 0 1px 0 0 #2196F3;
+}
+/* icon prefix focus color */
+.input-field .active {
+    color: #2196F3;
+}
+
+/* nav */
+nav {position:fixed;top:0;left:0;width:100%;height:64px;z-index:100}
+nav h1 {height:64px;margin:0;line-height:64px}
+nav #gnb {top:64px !important;width:auto !important}
+nav #usermenu {top:64px !important;min-width:367px !important;width:auto !important}
+nav #usermenu .row {margin:0}
+nav #usermenu .row .col {margin:0;padding:0;white-space:nowrap}
+nav #usermenu .row a {width:100%;height:50px;margin:0;border-radius:0;color:#FFFFFF;line-height:50px}
+nav #usermenu .btn-blue a:hover {background-color:#1E88E5 !important}
+nav #usermenu .btn-red a:hover {background-color:#B71C1C !important}
+nav #usermenu .list-lotto {overflow:hidden;margin-top:5px;padding:5px;border-radius:30px}
+nav #usermenu .list-lotto:first-child {margin-top:0}
+nav #usermenu .list-lotto span {float:left;width:50px;height:50px;margin-left:5px;border-radius:25px;font-size:20px;font-weight:bold;color:#FFFFFF;text-align:center;line-height:50px}
+nav #usermenu .list-lotto span:first-child {margin-left:0}
+nav #usermenu .box-empty {display:block;height:60px;border-radius:30px;font-size:24px;font-weight:bold;color:#D1D1D1;text-align:center;line-height:60px}
+
+/* contents */
+.contents {position:relative;padding:64px 0;box-sizing:border-box}
+.contents .container {max-width:1024px;width:100%;margin:100px auto;padding:0 22px}
+.contents main .card {margin:0}
+.contents main .card + .card {margin-top:64px}
+.contents .box-card + .box-card {margin-top:64px}
+.contents .box-card .tit-card {margin:0}
+.contents .box-card .tit-card .right li {display:inline-block;margin-left:10px}
+.contents .box-card .tit-card .right li a {width:36px;padding:0}
+.contents .box-card h2 {height:64px;margin:0;font-size:24px;color:#2196F3;line-height:64px;text-transform:uppercase}
+.contents .box-card .card-inner {padding:64px;text-align:center}
+.contents .box-card .card-inner .box-number .list-number {position:relative;text-align:center}
+.contents .box-card .card-inner .box-number .list-number + .list-number {margin-top:10px}
+.contents .box-card .card-inner .box-number .list-number div {display:inline-block}
+.contents .box-card .card-inner .box-number .list-number ol {margin:0;width:670px;padding:10px;border-radius:60px;list-style:none}
+.contents .box-card .card-inner .box-number .list-number ol:after {display:block;clear:both;content:''}
+.contents .box-card .card-inner .box-number .list-number ol li {float:left;margin-left:10px;padding:0;text-align:center}
+.contents .box-card .card-inner .box-number .list-number ol li:first-child {margin-left:0}
+.contents .box-card .card-inner .box-number .list-number strong {position:absolute;top:0;left:0;width:64px;height:120px;padding:10px 0;font-size:48px;font-weight:bold;font-style:italic;line-height:100px}
+.contents .box-card .card-inner .box-number .list-number ol input {width:100px;height:100px;margin:0;border:0 none;border-radius:50px;font-size:48px;font-weight:bold;color:#FFFFFF;line-height:64px;text-align:center}
+.contents .box-card .card-inner .box-number .list-number ol input:focus {box-shadow:none}
+.contents .box-card .card-inner .box-number .list-number ol span {display:block;width:100px;height:100px;margin:0;border:0 none;border-radius:50px;font-size:48px;font-weight:bold;color:#FFFFFF;line-height:100px;text-align:center}
+.contents .box-card .card-inner .box-number .list-number .btns {position:absolute;top:40px;right:0;width:90px;text-align:left}
+.contents .box-card .card-inner .box-number .list-number .btns a {margin-left:5px}
+.contents .box-card .card-inner .box-empty {display:inline-block;margin:0;width:670px;height:120px;padding:10px;border-radius:60px;background-color:#EEEEEE;font-size:48px;font-weight:bold;color:#D1D1D1;line-height:100px;list-style:none}
+.contents .box-card .card-inner .box-btn {margin-top:32px;padding-top:32px;border-top:1px solid #E9E9E9;text-align:right}
+.contents .box-card .card-inner .box-btn a {margin-left:10px}
+
+/* aside */
+.aside strong {position:absolute;top:0;left:0;z-index:50;width:100%;height:64px;padding:10px 20px;font-size:30px;font-weight:normal;color:#FFFFFF}
+.aside .side-nav {overflow:hidden;width:500px !important;height:100% !important;padding:0;border:0 none}
+.aside .list-side {overflow:hidden;position:absolute;top:0;left:0;width:100%;height:100%;margin:0;padding-top:64px;box-sizing:border-box}
+.aside .list-side .list-inner {overflow-y:scroll;height:100%;margin:0}
+.aside .list-side .list-inner .collection-item {overflow:hidden}
+.aside .list-side .list-inner .box-lotto {display:inline-block;overflow:hidden;padding:5px;border-radius:30px;vertical-align:top}
+.aside .list-side .list-inner .box-lotto span {float:left;width:50px;height:50px;margin-left:5px;border-radius:25px;font-size:20px;color:#FFFFFF;text-align:center;line-height:50px}
+.aside .list-side .list-inner .box-lotto span:first-child {margin-left:0}
+.aside .list-side .list-inner .txt-username {float:right;height:60px;color:#2196F3;line-height:60px}
+.aside .button-aside {position:fixed;top:50%;left:15px;margin-top:-28px}
+
+/* footer */
+footer {position:fixed;bottom:0;left:0;z-index:100;width:100%;height:64px}
+.footer-inner {height:64px;font-size:12px;color:#FFFFFF;line-height:64px}
+.footer-inner .btn {position:absolute;top:14px;right:15px;color:#2196F3}
+
+/* auth */
+.auth {margin-top:50px;text-align:center}
+.auth .card {width:400px;margin:0 auto}
+.auth .header {font-size:18px}
+.auth .row {margin:0}
+.auth .row .col {padding:0}
+.auth .btn {width:90%}
+.auth .footer {border-top:1px solid#E9E9E9;padding-bottom:21px}
+
+@media screen and (max-width: 480px) {
+    .auth .card {width:100%}
+    .logo {font-size:60px}
+}
+
+.logo {font-size:80px;font-weight:100;text-align:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.logo {color:#5B5B5B}
+
+/* modal */
+.modal {width:500px;text-align:left}
+.modal h4 {height:60px;padding:0 24px;font-size:2.1rem;color:#FFFFFF;line-height:60px}
+.modal .modal-footer .btn {margin-left:10px}
