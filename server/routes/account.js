@@ -142,7 +142,9 @@ router.post('/withdraw', (req, res) => {
     Account.findOneAndUpdate({ username: req.session.loginInfo.username }, { $set: { dormant: true }}, (err, account) => {
         if (err) return res.status(500).json({ error: 'database failure' });
 
-        Lotto.remove({ username: account._id });
+        Lotto.remove({ username: account._id }, (err) => {
+            if (err) return res.status(500).json({ error: 'lottos remove failure' });
+        });
     });
     
     req.session.destroy(err => { if (err) throw err; });
