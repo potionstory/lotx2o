@@ -60,6 +60,7 @@ router.post('/signup', function (req, res) {
             email: req.body.email,
             password: req.body.password,
             money: 5000,
+            dormant: false,
             lotto: {
                 count: 0
             }
