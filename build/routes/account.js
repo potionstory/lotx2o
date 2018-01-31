@@ -101,6 +101,13 @@ router.post('/signin', function (req, res) {
             });
         }
 
+        if (account.dormant) {
+            return res.status(401).json({
+                error: 'LOGIN FAILED',
+                code: 1
+            });
+        }
+
         var lotto = [];
         var session = req.session;
 
@@ -144,7 +151,7 @@ router.post('/logout', function (req, res) {
 
 /* 회원탈퇴 */
 router.post('/withdraw', function (req, res) {
-    _account2.default.remove({ "username": req.session.loginInfo.username }, function (err) {
+    _account2.default.findOneAndUpdate({ username: req.session.loginInfo.username }, { $set: { dormant: true } }, function (err) {
         if (err) return res.status(500).json({ error: 'database failure' });
     });
 

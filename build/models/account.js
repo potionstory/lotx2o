@@ -21,6 +21,7 @@ var Account = new Schema({
     email: String,
     password: String,
     money: Number,
+    dormant: Boolean,
     created: { type: Date, default: Date.now }
 });
 
