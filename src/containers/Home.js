@@ -21,19 +21,19 @@ class Home extends React.Component {
         $(".button-aside").sideNav();
         $('.dropdown-button').dropdown();
 
-        const loadLottoLoop = () => {
-            this.loadNewLotto().then(
-                () => {
-                    this.lottoLoaderTimeoutId = setTimeout(loadLottoLoop, 5000);
-                }
-            );
-        }
+        // const loadLottoLoop = () => {
+        //     this.loadNewLotto().then(
+        //         () => {
+        //             this.lottoLoaderTimeoutId = setTimeout(loadLottoLoop, 20000);
+        //         }
+        //     );
+        // }
 
-        this.props.lottoListRequest(true).then(
-            () => {
-                loadLottoLoop();
-            }
-        );
+        // this.props.lottoListRequest(true).then(
+        //     () => {
+        //         loadLottoLoop();
+        //     }
+        // );
 
         $('.list-side .list-inner').scroll(() => {
             if($('.list-side ul').height() - $('.list-side .list-inner').height() - $('.list-side .list-inner').scrollTop() < 50){
