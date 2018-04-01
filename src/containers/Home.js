@@ -29,11 +29,12 @@ class Home extends React.Component {
         //     );
         // }
 
-        // this.props.lottoListRequest(true).then(
-        //     () => {
-        //         loadLottoLoop();
-        //     }
-        // );
+        this.props.lottoListRequest(true).then(
+            () => {
+                //loadLottoLoop(); 새로운 로또번호 루프 임시로 막음
+                return this.props.lottoListRequest(true);
+            }
+        );
 
         $('.list-side .list-inner').scroll(() => {
             if($('.list-side ul').height() - $('.list-side .list-inner').height() - $('.list-side .list-inner').scrollTop() < 50){
