@@ -9,9 +9,16 @@ class Aside extends React.Component {
         super(props);
 
         this.handleList = this.handleList.bind(this);
+        this.handleClose = this.handleClose.bind(this);
     }
 
-    
+    componentDidMount() {
+        $(".button-aside").sideNav();
+    }
+
+    handleClose() {
+        $(".button-aside").sideNav('hide');
+    }
 
     handleList() {
         return (
@@ -29,6 +36,7 @@ class Aside extends React.Component {
         return (
             <aside className="aside">
                 <div id="slide-out" className="side-nav collection">
+                    <a onClick={this.handleClose} className="btn-close"><i className="medium material-icons">close</i></a>
                     <strong className="blue">LIST</strong>
                     <div className="list-side">
                         <div className="list-inner">
