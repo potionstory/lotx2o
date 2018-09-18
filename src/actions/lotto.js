@@ -23,22 +23,6 @@ export function lottoSaveRequest(count, number, username) {
   };
 }
 
-/* lotto 번호삭제 액션 생성자 */
-export function lottoRemoveRequest(id) {
-  return dispatch => {
-    dispatch(lottoRemove());
-
-    return axios
-      .post("/api/lotto/remove", { id })
-      .then(response => {
-        dispatch(lottoRemoveSuccess());
-      })
-      .catch(error => {
-        dispatch(lottoRemoveFailure());
-      });
-  };
-}
-
 export function lottoSave() {
   return {
     type: LOTTO_SAVE
@@ -54,6 +38,22 @@ export function lottoSaveSuccess() {
 export function lottoSaveFailure() {
   return {
     type: LOTTO_SAVE_FAILURE
+  };
+}
+
+/* lotto 번호삭제 액션 생성자 */
+export function lottoRemoveRequest(id) {
+  return dispatch => {
+    dispatch(lottoRemove());
+
+    return axios
+      .post("/api/lotto/remove", { id })
+      .then(response => {
+        dispatch(lottoRemoveSuccess());
+      })
+      .catch(error => {
+        dispatch(lottoRemoveFailure());
+      });
   };
 }
 
