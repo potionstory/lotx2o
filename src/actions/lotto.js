@@ -74,25 +74,3 @@ export function lottoRemoveFailure() {
     type: LOTTO_REMOVE_FAILURE
   };
 }
-
-export function lottoCountIncrease(count) {
-  return {
-    type: LOTTO_COUNT_INCREASE,
-    count
-  };
-}
-
-export function lottoCountDecrease(count) {
-  return {
-    type: LOTTO_COUNT_DECREASE,
-    count
-  };
-}
-
-export function lottoNumberUpdate(index, number) {
-  return {
-    type: LOTTO_NUMBER_UPDATE,
-    index,
-    number
-  };
-}
