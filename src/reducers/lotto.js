@@ -7,10 +7,6 @@ const initialState = {
   },
   remove: {
     status: "INIT"
-  },
-  status: {
-    count: 1,
-    number: []
   }
 };
 
